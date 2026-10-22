@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: deploy-aplicacao-python
+    runtime: python
+    rootDir: 2 modulo_desenvolvimento_api_com_flask
+    buildCommand: poetry install --no-root
+    startCommand: bash render-deploy.sh
