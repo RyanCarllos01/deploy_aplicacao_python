@@ -1,5 +1,5 @@
 set -e
 
 poetry run flask --app src.app db upgrade
-poetry run gunicorn src.wsgi:app
+poetry run gunicorn --bind "0.0.0.0:${PORT:-10000}" src.wsgi:app
 
